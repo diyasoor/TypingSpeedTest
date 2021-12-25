@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier Prime', monospace;}
+
+.mainDiv {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: #ffffff;
+}
+
+/* Image and Animation */
+
+.imgDiv {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#lamp,
+#note,
+#pencils {
+    animation: left 1000ms forwards;
+    opacity: 0;
+}
+
+@keyframes  left{
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+#laptop {
+    animation: up 1000ms forwards;
+    opacity: 0;
+}
+@keyframes  up{
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+#spec,
+#mobile,
+#book,
+#sticky,
+#eraser{
+    animation: right 1000ms forwards;
+    opacity: 0;
+}
+
+@keyframes  right{
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Typing Area */
+
+.centerDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1{
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    color: #284b63;
+    text-shadow: 0.5px 0.5px 0.1px #36607c;
+    font-size: 2.5rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+textarea {
+    background-color: #444;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+    border-radius: 10px 10px 0 0;
+    border: 15px solid #838c92;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.mainbtn {
+    padding: 10px 20px;
+    margin-top: 5px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    background: #3c6e71;
+}
+
+@media (max-width: 650px) {
+    .mainDiv {
+        padding: 10px 10px;
+        margin-top: 10px;
+        /* //width: auto; */
+    }
+
+    .centerDiv {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        width: 100vw;
+        height: 100vh;
+        
+    }
+
+    svg {
+        height: 178px;
+        width: 175px;
+    }
+
+    h1 {
+        margin-bottom: 5px;
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    textarea {
+        border-radius: 5px 5px 0 0;
+        border: 10px solid #838c92;
+        font-size: 1rem;
+        margin: 2px;
+    }
+
+    .mainbtn {
+        font-size: 1rem;
+        display: inline-block;
+        
+        width: 100px;
+        margin: auto;
+    } 
+
+}
