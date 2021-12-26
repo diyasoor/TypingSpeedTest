@@ -38,7 +38,7 @@ const end = () => {
 
     let speed = Math.round((wordCount / totalTime) * 60);
 
-    let finalMsg = "Your typing speed is " + speed + " words per minutes. ";
+    let finalMsg = "Your typing speed is " + speed + " wpm ";
 
     finalMsg += compareWords(msg.innerText, totalStr);
 
@@ -57,8 +57,9 @@ const compareWords = (str1, str2) => {
         }
     })
 
-    let errorWrds = (word1.length - count);
-    return (`${count} correct out of ${word1.length} words and error ${errorWrds} words.`);
+    //let errorWrds = (word1.length - count);
+    let accu = Math.round((count / word1.length) * 100);
+    return (` ; accuracy: ${accu}%`);
 }
 
 const wordCounter = (str) => {
